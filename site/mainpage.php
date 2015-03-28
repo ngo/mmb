@@ -13,7 +13,11 @@ print('<p align = "left" style = "text-align: justify;">Основная иде�
 print('<p align = "left" style = "text-align: justify;">Московский Марш-бросок проводится дважды в год: в
 середине мая и в конце октября. Обычно, ММБ состоит из двух этапов ориентирования с ночевкой (обязательным
 свободным временем) между ними. Организаторы стараются включить в
-соревнования ночное ориентирование и различные неожиданности на дистанции.</p>'."\r\n");
+соревнования ночное ориентирование и различные неожиданности на дистанции.</p>
+
+<p> <a class="btn btn-primary btn-lg" href="http://www.livejournal.com/community/_mmb_" target="_blank">ЖЖ-сообщество</a>
+  <a class="btn btn-primary btn-lg" href="http://slazav.mccme.ru/maps/" target="_blank">Карты</a><a class="btn btn-primary btn-lg" href="http://mmb.progressor.ru/php/mmbscripts/vp.php" target="_blank">Впечатления</a><a class="btn btn-primary btn-lg" href="http://mmb.progressor.ru/icons.html" target="_blank">Значки</a><a class="btn btn-primary btn-lg" href="http://slazav.mccme.ru/mmb/" target="_blank">Архив</a>
+</p>'."\r\n");
 
 print('</div>'."\r\n");
 
