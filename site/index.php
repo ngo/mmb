@@ -120,6 +120,7 @@
 <html>
  <head>
   <title>ММБ</title>
+  <link rel="Stylesheet" type="text/css"  href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material.min.css" />
   <link rel="Stylesheet" type="text/css"  href="styles/mmb.css" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
