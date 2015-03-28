@@ -6,5 +6,7 @@ ul	{margin-top:0; margin-bottom:1em;}
 tr.spacer td	{padding:0; height:1px;}
 p       {text-align: justify;}
 
-a:link {color: #007700;}
+a {color: #007700;}
 a:visited {color: #BB0000;}
+
+.netunitazam {color:#007700;}
