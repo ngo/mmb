@@ -108,7 +108,7 @@ if (!isset($MyPHPScript)) return;
 		print('<input type = "hidden" name = "view" value = "'.$view.'">'."\r\n");
 		print('<table cellspacing="0" cellpadding="0" border="0" class="menu">'."\r\n");
 		print('<input type="email" class="form-control floating-label" name="Login" style="width: 185px; font-size:90%" value="" tabindex="101" placeholder="Введите email"></td></tr>'."\r\n"); 
-		print('<input type="password" name="Password" style="width:130px; font-size:90%" size="10" value="Пароль" tabindex="102" class="form-control floating-label" data-hint="Пароль" placeholder="Введите пароль">
+		print('<input type="password" name="Password" style="width:130px; font-size:90%" size="10" tabindex="102" class="form-control floating-label" data-hint="Пароль" placeholder="Введите пароль">
                 <input type="submit" value="Вход" tabindex="103" style="width: 55px;" class="btn btn-primary btn-xs"></td></tr>'."\r\n"); 
 		print('<tr><td><a href = "javascript:RestorePassword();"  title = "Будет выслан запрос о сменен пароля на указанный выше e-mail">Забыли пароль?</a></td></tr>'."\r\n"); 
 		print('<td><br><a href="javascript:NewUser();" title="Переход к форме регистрации нового пользователя" class="btn btn-primary btn-small">Регистрация</a></td>'."\r\n"); 
@@ -394,7 +394,7 @@ if (!isset($MyPHPScript)) return;
 		       onblur = "javascript: if (trimBoth(this.value) == \'\') {this.value=\'Номер команды\';}"
                  > 
             <h3>Пользователи</h3>
-	       <input type="submit"  name="FindButton" value="Найти"   style = "width: 55px; margin-left: 5px;" tabindex = "207"></td></tr>'."\r\n"); 
+	       <input type="submit"  name="FindButton" value="Найти"   style = "width: 55px;" tabindex = "207"></td></tr>'."\r\n"); 
 	print('</table>'."\r\n");
 	print('</form>'."\r\n");
 	// Поиск участника
@@ -465,7 +465,7 @@ if (!isset($MyPHPScript)) return;
 
         // Почта
 	print('<table  class = "menu" border = "0" cellpadding = "0" cellspacing = "0">'."\r\n");
-	print('<tr><td><a style = "font-family: Times New Roman, Serif; font-size: 100%;" href="javascript: ShowEmail();" title = "Адрес латинскими буквами или кликните мышкой">ммбсайт@googlegroups.com</a></td></tr>'."\r\n");
+	print('<tr><td><a style = "font-size: 100%;" href="javascript: ShowEmail();" title = "Адрес латинскими буквами или кликните мышкой">ммбсайт@googlegroups.com</a></td></tr>'."\r\n");
         print('<tr><td><a href="https://github.com/realtim/mmb/wiki/%D0%A1%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BE-%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D0%B5-%D0%9C%D0%9C%D0%91"  target = "_blank">О сервисе</a>, 
                        <a href="https://github.com/realtim/mmb/wiki/%D0%90%D0%B2%D1%82%D0%BE%D1%80%D1%8B" target = "_blank">Авторы</a>
                </td></tr>'."\r\n"); 
