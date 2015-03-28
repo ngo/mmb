@@ -106,16 +106,12 @@ if (!isset($MyPHPScript)) return;
 		print('<form  name = "UserLoginForm"  action = "'.$MyPHPScript.'" method = "post" onSubmit = "return ValidateUserLoginForm();">'."\r\n");
                 print('<input type = "hidden" name = "action" value = "UserLogin">'."\r\n"); 
 		print('<input type = "hidden" name = "view" value = "'.$view.'">'."\r\n");
-		print('<table  class = "menu" border = "0" cellpadding = "0" cellspacing = "0">'."\r\n");
-		print('<tr><td class = "input"><input type="text" name="Login"
-                       style="width: 185px;" value="E-mail" tabindex = "101"
-                       onclick = "javascript: if (trimBoth(this.value) == \'E-mail\') {this.value=\'\';}"
-		       onblur = "javascript: if (trimBoth(this.value) == \'\') {this.value=\'E-mail\';}"
-                       ></td></tr>'."\r\n"); 
-		print('<tr><td class = "input"><input type="password" name="Password"  style = "width:101px;" size="10" value="" tabindex = "102">
-                            <input type="submit" name="RegisterButton" value="Вход" tabindex = "103"  style = "margin-left: 25px; width: 55px;"></td></tr>'."\r\n"); 
+		print('<table cellspacing="0" cellpadding="0" border="0" class="menu">'."\r\n");
+		print('<input type="email" class="form-control floating-label" name="Login" style="width: 185px; font-size:90%" value="" tabindex="101" placeholder="Введите email"></td></tr>'."\r\n"); 
+		print('<input type="password" name="Password" style="width:130px; font-size:90%" size="10" value="Пароль" tabindex="102" class="form-control floating-label" data-hint="Пароль" placeholder="Введите пароль">
+                <input type="submit" value="Вход" tabindex="103" style="width: 55px;" class="btn btn-primary btn-xs"></td></tr>'."\r\n"); 
 		print('<tr><td><a href = "javascript:RestorePassword();"  title = "Будет выслан запрос о сменен пароля на указанный выше e-mail">Забыли пароль?</a></td></tr>'."\r\n"); 
-		print('<tr><td><a href = "javascript:NewUser();"  title = "Переход к форме регистрации нового пользователя">Новый пользователь</a></td></tr>'."\r\n"); 
+		print('<td><br><a href="javascript:NewUser();" title="Переход к форме регистрации нового пользователя" class="btn btn-primary btn-small">Регистрация</a></td>'."\r\n"); 
 		print('</table>'."\r\n");
 		print('</form>'."\r\n");
 	} else {
@@ -397,6 +393,7 @@ if (!isset($MyPHPScript)) return;
                        onclick = "javascript: if (trimBoth(this.value) == \'Номер команды\') {this.value=\'\';}"
 		       onblur = "javascript: if (trimBoth(this.value) == \'\') {this.value=\'Номер команды\';}"
                  > 
+            <h3>Пользователи</h3>
 	       <input type="submit"  name="FindButton" value="Найти"   style = "width: 55px; margin-left: 5px;" tabindex = "207"></td></tr>'."\r\n"); 
 	print('</table>'."\r\n");
 	print('</form>'."\r\n");
@@ -417,7 +414,7 @@ if (!isset($MyPHPScript)) return;
                        onclick = "javascript: if (trimBoth(this.value) == \'Часть ФИО\') {this.value=\'\';}"
 		       onblur = "javascript: if (trimBoth(this.value) == \'\') {this.value=\'Часть ФИО\';}"
 		>
-	       <input type="submit"  name="FindButton" value="Найти" style = "width: 55px; margin-left: 5px;"  tabindex = "302"></td></tr>'."\r\n"); 
+	       <input type="submit"  name="FindButton" value="Найти" class="btn btn-active btn-xs"  tabindex = "302"></td></tr>'."\r\n"); 
 	print('</table>'."\r\n");
 	print('</form>'."\r\n");
 	print('</br>'."\r\n");

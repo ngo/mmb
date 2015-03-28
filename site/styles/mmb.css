@@ -10,3 +10,5 @@ a {color: #007700;}
 a:visited {color: #BB0000;}
 
 .netunitazam {color:#007700;}
+
+.btn.btn-xs {padding: 4px 10px;} //smaller paddings
