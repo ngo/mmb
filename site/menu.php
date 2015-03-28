@@ -148,7 +148,15 @@ if (!isset($MyPHPScript)) return;
 	{ 
 		if (document.FindTeamForm.TeamNum.value == '') 
 		{
-			alert('Не указан номер команды.');           
+			alert('<div id="simple-dialog" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Не указан номер команды.</p>
+      </div>
+    </div>
+  </div>
+</div>');           
 			return false;
 		} 
 
