@@ -285,7 +285,7 @@ if (!isset($MyPHPScript)) return;
          // Если не разрешена правка - не показываем адрес почты
          if ($AllowEdit == 1) 
 	 {
-	  print('<tr><td class = "input"><input type="text" autocomplete = "off" name="UserEmail" size="50" value="'.$UserEmail.'" tabindex = "'.(++$TabIndex).'"  '.$DisabledText.'
+	  print('<tr><td class = "input"><input type="email" class="form-control floating-label" placeholder="Введите Email, он используется для входа на сайт" autocomplete = "off" name="UserEmail" size="50" value="'.$UserEmail.'" tabindex = "'.(++$TabIndex).'"  '.$DisabledText.'
                  '.($viewmode <> 'Add' ? '' : 'onclick = "javascript: if (trimBoth(this.value) == \''.$UserEmail.'\') {this.value=\'\';}"').'
                  '.($viewmode <> 'Add' ? '' : 'onblur = "javascript: if (trimBoth(this.value) == \'\') {this.value=\''.$UserEmail.'\';}"').'
 	         title = "E-mail - Используется для идентификации пользователя"></td></tr>'."\r\n");
