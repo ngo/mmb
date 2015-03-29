@@ -339,6 +339,7 @@ if (!isset($MyPHPScript)) return;
         { 
 	    print('<tr><td><h3>Администрирование</h3>
         <a href = "javascript:NewRaid();" class="btn btn-primary btn-small" title = "Создание марш-броска">Новый ММБ</a></td></tr>
+        <br><--костыль из-за сочетания табличной вёрстки и новых стилей-->
         <tr><td><a href = "javascript:ViewRaidInfo();" title = "Параметры выбранного марш-броска">Параметры</a></td></tr> 
 	    <tr><td><a href = "javascript:ViewAdminModeratorsPage();" title = "Страница администрирования модераторов">Модераторы</a></td></tr>'."\r\n"); 
         }
@@ -397,12 +398,12 @@ if (!isset($MyPHPScript)) return;
                        onclick = "javascript: if (trimBoth(this.value) == \'Номер команды\') {this.value=\'\';}"
 		       onblur = "javascript: if (trimBoth(this.value) == \'\') {this.value=\'Номер команды\';}"
                  > 
-            <h3>Пользователи</h3>
 	       <input type="submit"  name="FindButton" value="Найти"   style = "width: 55px;" tabindex = "207"></td></tr>'."\r\n"); 
 	print('</table>'."\r\n");
 	print('</form>'."\r\n");
 	// Поиск участника
-	print('<form  name = "FindUserForm"  action = "'.$MyPHPScript.'" method = "post" onSubmit = "return ValidateFindUserForm();">'."\r\n");
+	print('<h3>Пользователи</h3>
+    <form  name = "FindUserForm"  action = "'.$MyPHPScript.'" method = "post" onSubmit = "return ValidateFindUserForm();">'."\r\n");
 	if ($UserId > 0)
 	{
                 print('<input type = "hidden" name = "sessionid" value = "'.$SessionId.'">'."\r\n"); 
@@ -413,12 +414,13 @@ if (!isset($MyPHPScript)) return;
 	print('<input type = "hidden" name = "DistanceId" value = "0">'."\r\n");
 	print('<table  class = "menu" border = "0" cellpadding = "0" cellspacing = "0">'."\r\n");
 	//print('<tr><td class = "input">Поиск пользователя</td></tr>'."\r\n"); 
-	print('<tr><td class = "input"><input  type="text" name="FindString" style = "width:125px;" value="Часть ФИО" tabindex = "301" 
+	print('<tr><td class = "input"><input  type="text" name="FindString" style = "width:125px;" tabindex = "301" 
 	       title = "Будет выведен список пользователей, чьи ФИО содержат указанный текст. Для вывода всех наберите: все-все (можно и все-все-все)."
                        onclick = "javascript: if (trimBoth(this.value) == \'Часть ФИО\') {this.value=\'\';}"
 		       onblur = "javascript: if (trimBoth(this.value) == \'\') {this.value=\'Часть ФИО\';}"
 		>
 	       <input type="submit"  name="FindButton" value="Найти" class="btn btn-active btn-xs"  tabindex = "302"></td></tr>'."\r\n"); 
+
 	print('</table>'."\r\n");
 	print('</form>'."\r\n");
 	print('</br>'."\r\n");
@@ -461,7 +463,7 @@ if (!isset($MyPHPScript)) return;
 
         // Почта
 	print('<table  class = "menu" border = "0" cellpadding = "0" cellspacing = "0">'."\r\n");
-	print('<tr><td><a style = "font-size: 100%;" href="javascript: ShowEmail();" title = "Адрес латинскими буквами или кликните мышкой">ммбсайт@googlegroups.com</a></td></tr>'."\r\n");
+	print('<tr><td><a style = "font-size: 85%;" href="javascript: ShowEmail();" title = "Адрес латинскими буквами или кликните мышкой">ммбсайт@googlegroups.com</a></td></tr>'."\r\n");
         print('<tr><td><a href="https://github.com/realtim/mmb/wiki/%D0%A1%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BE-%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D0%B5-%D0%9C%D0%9C%D0%91"  target = "_blank">О сервисе</a>, 
                        <a href="https://github.com/realtim/mmb/wiki/%D0%90%D0%B2%D1%82%D0%BE%D1%80%D1%8B" target = "_blank">Авторы</a>
                </td></tr>'."\r\n"); 
