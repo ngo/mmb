@@ -324,19 +324,23 @@ if (!isset($MyPHPScript)) return;
                 mysql_free_result($Result);
 	print('</select>'."\r\n");  
 	print('</td></tr>'."\r\n");
-	if (CanCreateTeam($Administrator, $Moderator, $OldMmb, $RaidStage, $TeamOutOfRange))
-	{
-		print('<tr><td><a href = "javascript:NewTeam();" title = "Переход к форме регистрации новой команды на выбранный выше ММБ">Новая команда</a></td></tr>'."\r\n"); 
-	}
-	print('<tr><td><a href = "javascript:RaidTeams();" title = "Список команд для выбранного выше ММБ">Команды</a></td></tr>'."\r\n"); 
+	
+	print('<tr><td>');
+    print('<br>'); //костыль из-за сочетания табличной вёрстки и новых стилей
+    print('<a href = "javascript:RaidTeams();" title = "Список команд для выбранного выше ММБ">Команды</a>'); 
+    if (CanCreateTeam($Administrator, $Moderator, $OldMmb, $RaidStage, $TeamOutOfRange))
+        {
+            print('<a href="javascript:NewTeam();" class="btn btn-primary btn-xs" title="Переход к форме регистрации новой команды на выбранный выше ММБ">Новая</a></td></tr>'."\r\n"); 
+        }
         // Впечатываем ссылку на администрирование
 
         // Ввод/ПРавка марш-броска
 	if ($Administrator)
         { 
-	    print('<tr><td><a href = "javascript:NewRaid();" title = "Создание марш-броска">Новый марш-бросок</a></td></tr>'."\r\n"); 
-	    print('<tr><td><a href = "javascript:ViewRaidInfo();" title = "Параметры марш-броска">Марш-бросок</a></td></tr>'."\r\n"); 
-	    print('<tr><td><a href = "javascript:ViewAdminModeratorsPage();" title = "Страница администрирования модераторов">Модераторы</a></td></tr>'."\r\n"); 
+	    print('<tr><td><h3>Администрирование</h3>
+        <a href = "javascript:NewRaid();" class="btn btn-primary btn-small" title = "Создание марш-броска">Новый ММБ</a></td></tr>
+        <tr><td><a href = "javascript:ViewRaidInfo();" title = "Параметры выбранного марш-броска">Параметры</a></td></tr> 
+	    <tr><td><a href = "javascript:ViewAdminModeratorsPage();" title = "Страница администрирования модераторов">Модераторы</a></td></tr>'."\r\n"); 
         }
 
 
