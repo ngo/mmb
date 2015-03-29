@@ -348,7 +348,8 @@ if (!isset($MyPHPScript)) return;
         // Точки сканирования 
 	if ($Administrator || $Moderator )
         {
-	  print('<tr><td><a href = "javascript:ViewScanPoints();" title = "Список точек сканирования для выбранного выше ММБ">Скан-точки</a></td></tr>'."\r\n"); 
+	  print('<tr><td><h3>Выбранный ММБ</h3>
+      <a href = "javascript:ViewScanPoints();" title = "Список точек сканирования для выбранного выше ММБ">Скан-точки</a></td></tr>'."\r\n"); 
         }
 	 
 
@@ -394,11 +395,8 @@ if (!isset($MyPHPScript)) return;
         print('<tr><td><a href = "javascript:ViewRankPage();" title = "Страница рейтинга пользователей">Рейтинг</a></td></tr>'."\r\n"); 
         
 	//print('<tr><td class = "input">Поиск:</td></tr>'."\r\n"); 
-	print('<tr><td style = "padding-top: 15px;"><input  type="text" name="TeamNum" style = "width: 125px;" value="Номер команды" tabindex = "206"  title = "Будет выведена карточка команды с указанным номером для выбранного выше ММБ"
-                       onclick = "javascript: if (trimBoth(this.value) == \'Номер команды\') {this.value=\'\';}"
-		       onblur = "javascript: if (trimBoth(this.value) == \'\') {this.value=\'Номер команды\';}"
-                 > 
-	       <input type="submit"  name="FindButton" value="Найти"   style = "width: 55px;" tabindex = "207"></td></tr>'."\r\n"); 
+	print('<tr><td><input  type="text" name="TeamNum" style = "width: 125px;font-size:90%;" placeholder="Номер команды" tabindex = "206"  title = "Будет выведена карточка команды с указанным номером для выбранного выше ММБ"}"> 
+	       <input type="submit" class="btn btn-primary btn-xs" name="FindButton" value="Найти"   style = "width: 55px;" tabindex = "207"></td></tr>'."\r\n"); 
 	print('</table>'."\r\n");
 	print('</form>'."\r\n");
 	// Поиск участника
