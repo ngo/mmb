@@ -395,8 +395,8 @@ if (!isset($MyPHPScript)) return;
         print('<tr><td><a href = "javascript:ViewRankPage();" title = "Страница рейтинга пользователей">Рейтинг</a></td></tr>'."\r\n"); 
         
 	//print('<tr><td class = "input">Поиск:</td></tr>'."\r\n"); 
-	print('<tr><td><input  type="text" name="TeamNum" style = "width: 125px;font-size:90%;" placeholder="Номер команды" tabindex = "206"  title = "Будет выведена карточка команды с указанным номером для выбранного выше ММБ"}"> 
-	       <input type="submit" class="btn btn-primary btn-xs" name="FindButton" value="Найти"   style = "width: 55px;" tabindex = "207"></td></tr>'."\r\n"); 
+	print('<tr><td><input  type="text" name="TeamNum" style = "width: 125px;font-size:90%;" placeholder="Номер команды" tabindex = "206"  title = "Будет выведена карточка команды с указанным номером для выбранного выше ММБ"> 
+	       <input type="submit" class="btn btn-primary btn-xs" name="FindButton" value="Найти" style = "width: 55px;" tabindex = "207"></td></tr>'."\r\n"); 
 	print('</table>'."\r\n");
 	print('</form>'."\r\n");
 	// Поиск участника
@@ -412,12 +412,9 @@ if (!isset($MyPHPScript)) return;
 	print('<input type = "hidden" name = "DistanceId" value = "0">'."\r\n");
 	print('<table  class = "menu" border = "0" cellpadding = "0" cellspacing = "0">'."\r\n");
 	//print('<tr><td class = "input">Поиск пользователя</td></tr>'."\r\n"); 
-	print('<tr><td class = "input"><input  type="text" name="FindString" style = "width:125px;" tabindex = "301" 
-	       title = "Будет выведен список пользователей, чьи ФИО содержат указанный текст. Для вывода всех наберите: все-все (можно и все-все-все)."
-                       onclick = "javascript: if (trimBoth(this.value) == \'Часть ФИО\') {this.value=\'\';}"
-		       onblur = "javascript: if (trimBoth(this.value) == \'\') {this.value=\'Часть ФИО\';}"
-		>
-	       <input type="submit"  name="FindButton" value="Найти" class="btn btn-active btn-xs"  tabindex = "302"></td></tr>'."\r\n"); 
+	print('<tr><td class = "input"><input  type="text" name="FindString" style = "width:125px; font-size:90%;" tabindex = "301" 
+	       title = "Будет выведен список пользователей, чьи ФИО содержат указанный текст. Для вывода всех наберите: все-все (можно и все-все-все).">
+	       <input type="submit"  name="FindButton" value="Найти" class="btn btn-primary btn-xs"  tabindex = "302"></td></tr>'."\r\n"); 
 
 	print('</table>'."\r\n");
 	print('</form>'."\r\n");
