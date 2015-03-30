@@ -412,7 +412,7 @@ if (!isset($MyPHPScript)) return;
 	print('<input type = "hidden" name = "DistanceId" value = "0">'."\r\n");
 	print('<table  class = "menu" border = "0" cellpadding = "0" cellspacing = "0">'."\r\n");
 	//print('<tr><td class = "input">Поиск пользователя</td></tr>'."\r\n"); 
-	print('<tr><td class = "input"><input  type="text" name="FindString" style = "width:125px; font-size:90%;" tabindex = "301" 
+	print('<tr><td class = "input"><input  type="text" placeholder="Номер команды" name="FindString" style = "width:125px; font-size:90%;" tabindex = "301" 
 	       title = "Будет выведен список пользователей, чьи ФИО содержат указанный текст. Для вывода всех наберите: все-все (можно и все-все-все).">
 	       <input type="submit"  name="FindButton" value="Найти" class="btn btn-primary btn-xs"  tabindex = "302"></td></tr>'."\r\n"); 
 
